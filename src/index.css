@@ -1,0 +1,20 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font: 16px Roboto, sans-serif;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: cornflowerblue;
+  text-decoration: none;
+  border-bottom: 1px solid cornflowerblue;
+}
