@@ -1,15 +1,24 @@
 {
   "compilerOptions": {
-    "target": "es2018",
+    "target": "es6",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "module": "esnext",
+    "module": "commonjs",
     "moduleResolution": "node",
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "jsx": "react",
     "strict": true,
     "experimentalDecorators": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "rootDir": ".",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["node_modules/*", "types/*"],
+      "src/*": ["./src/*"],
+      "tsrc/*": ["./src/*"],
+      "css/*": ["./src/*"]
+    },
+    "outDir": "build"
   },
-  "include": ["src/**/*"]
+  "include": ["test/*.ts", "test/*.tsx", "src/**/*"]
 }

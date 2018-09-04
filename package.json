@@ -3,11 +3,22 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "react-scripts-ts start",
-    "build": "react-scripts-ts build",
-    "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject",
-    "format": "prettier --write \"src/**/*.@(ts|tsx|css)\""
+    "clean": "rm -rf build && rm -f public/bundle.js",
+    "build": "npm run clean && tsc --build",
+    "bundle": "npm run build && browserify ./build/**/*.js -t aliasify -t browserify-css -o public/bundle.js",
+    "start": "npm run bundle && npm run start:nobuild",
+    "start:nobuild": "node build/server.js",
+  },
+  "aliasify": {
+    "sourceType": "module",
+    "aliases": {
+      "src": "./build/src",
+      "css": "./src"
+    }
+  },
+  "_moduleAliases": {
+    "src": "./build/src",
+    "css": "./src"
   },
   "dependencies": {
     "io-ts": "^1.3.0",
@@ -24,7 +35,11 @@
     "@types/react": "^16.4.11",
     "@types/react-dom": "^16.0.7",
     "@types/react-router-dom": "^4.3.0",
+    "aliasify": "^2.1.0",
+    "browserify": "^16.2.2",
+    "browserify-css": "^0.14.0",
     "prettier": "^1.14.2",
-    "typescript": "^3.0.1"
+    "typescript": "^3.0.1",
+    "watch": "^1.0.2"
   }
 }
