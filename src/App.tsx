@@ -16,7 +16,7 @@ class App extends React.Component {
           <section>
             <Switch>
               <Route
-                exact={true}
+                exact={false}
                 path="/"
                 render={({ history }) => (
                   <Home />

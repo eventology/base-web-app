@@ -20,5 +20,5 @@
     },
     "outDir": "build"
   },
-  "include": ["test/*.ts", "test/*.tsx", "src/**/*"]
+  "include": ["test/*.ts", "test/*.tsx", "src/**/*", "*.ts"]
 }
