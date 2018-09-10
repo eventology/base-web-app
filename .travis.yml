@@ -6,7 +6,7 @@ notifications:
     on_failure: change
 language: node_js
 node_js:
-  - 9
+  - "9"
 auth: &Auth |
   eval "$(npx travis-env)"
   echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
@@ -15,7 +15,7 @@ install:
   - npm ci
 jobs:
   include:
-  - stage: build_deploy
+  - stage: build
     name: Build Docker Image
     script:
       - *Auth
@@ -24,4 +24,4 @@ jobs:
       - docker build . -t eventology/base-web-app:latest
       - docker push eventology/base-web-app:latest
 stages:
-- build_deploy
+- build
