@@ -1,5 +1,5 @@
-import { observer } from 'mobx-react'
-import React from 'react'
+import { observer } from 'mobx-react';
+import React from 'react';
 
 interface Props {}
 
@@ -11,6 +11,6 @@ export default class Home extends React.Component<Props> {
         <section>Hello World!</section>
         <section />
       </main>
-    )
+    );
   }
 }

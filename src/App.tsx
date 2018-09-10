@@ -1,6 +1,6 @@
-import React from 'react'
-import { BrowserRouter, Link, Redirect, Route, Switch } from 'react-router-dom'
-import Home from 'src/home/Home'
+import React from 'react';
+import { BrowserRouter, Link, Redirect, Route, Switch } from 'react-router-dom';
+import Home from 'src/home/Home';
 
 class App extends React.Component {
   render() {
@@ -15,7 +15,11 @@ class App extends React.Component {
 
           <section>
             <Switch>
-              <Route exact={false} path="/" render={({ history }) => <Home />} />
+              <Route
+                exact={false}
+                path="/"
+                render={({ history }) => <Home />}
+              />
               {/* <Redirect exact={true} from="/" to="/feed/events/featured" /> */}
 
               {/* <Route
@@ -45,8 +49,8 @@ class App extends React.Component {
           </section>
         </main>
       </BrowserRouter>
-    )
+    );
   }
 }
 
-export default App
+export default App;
