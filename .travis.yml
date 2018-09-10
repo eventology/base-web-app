@@ -15,17 +15,13 @@ install:
   - npm ci
 jobs:
   include:
-  - stage: lint
-    name: Lint
-    script:
-      - npm run lint
   - stage: build
     name: Build Docker Image
     script:
       - *Auth
+      - npm run lint
       - npm run build:production
       - docker build . -t eventology/base-web-app:latest
       - docker push eventology/base-web-app:latest
 stages:
-- lint
 - build
