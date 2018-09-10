@@ -6,6 +6,7 @@ module.exports = {
   entry: {
     app: './src/index.tsx'
   },
+  mode: 'development',
   resolve: {
     extensions: [ '.tsx', '.ts', '.js' ],
     alias: {
