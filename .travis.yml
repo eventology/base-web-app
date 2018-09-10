@@ -1,5 +1,5 @@
 dist: trusty
-sudo: true
+sudo: required
 notifications:
   email:
     on_success: change
