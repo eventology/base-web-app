@@ -11,6 +11,7 @@ auth: &Auth |
   eval "$(npx travis-env)"
   echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 install:
+  - npm i -g npm@latest
   - npm ci
 jobs:
   include:
