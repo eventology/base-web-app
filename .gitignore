@@ -28,3 +28,4 @@ public/bundle.js
 
 # Ignore broserify intermediaries
 bundle*.js
+static/index.html

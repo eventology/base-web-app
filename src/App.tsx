@@ -1,5 +1,5 @@
-import React from "react"
-import { BrowserRouter, Link, Redirect, Route, Switch } from "react-router-dom"
+import React from "react";
+import { BrowserRouter, Link, Redirect, Route, Switch } from "react-router-dom";
 import Home from 'src/home/Home';
 
 class App extends React.Component {
