@@ -15,7 +15,7 @@ install:
   - npm ci
 jobs:
   include:
-  - stage: build
+  - stage: build_deploy
     name: Build Docker Image
     script:
       - *Auth
@@ -24,4 +24,4 @@ jobs:
       - docker build . -t eventology/base-web-app:latest
       - docker push eventology/base-web-app:latest
 stages:
-- build
+- build_deploy
