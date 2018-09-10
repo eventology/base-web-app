@@ -1,4 +1,4 @@
-# base-web-app
+# base-web-app [![Build Status](https://travis-ci.com/eventology/base-web-app.svg?branch=master)](https://travis-ci.com/eventology/base-web-app)
 A base web app build system.
 
 ## Overview
